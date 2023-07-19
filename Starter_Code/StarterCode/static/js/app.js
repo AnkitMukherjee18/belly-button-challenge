@@ -34,16 +34,16 @@ d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1
   }
 
   // Function that updates dashboard when sample is changed
-  function optionChanged(value) {
+  function optionChanged(sampleOne) {
     // Log the new value
-    console.log(value);
+    console.log(sampleOne);
 
     // Build the updated plots
-    updateDashboard(value);
-    selectedSample(value);
-    barChartData(value);
-    gaugeChartData(value);
-    bubbleChartData(value);
+    updateDashboard(sampleOne);
+    selectedSample(sampleOne);
+    barChartData(sampleOne);
+    gaugeChartData(sampleOne);
+    bubbleChartData(sampleOne);
   }
 
   function updateDashboard(sample) {
@@ -86,7 +86,7 @@ let barChartData = [
 
 let barLayout = {
   title: "Top 10 OTUs Present",
-  height: 500,
+  height: 550,
 };
 
 Plotly.newPlot("bar", barChartData, barLayout);
